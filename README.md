@@ -1,3 +1,5 @@
+
+
 # Authentication API Documentation
 
 ## Overview
@@ -14,6 +16,8 @@ Ensure that the application is running on localhost (default port 8080) or adjus
 
 ## API Endpoints
 
+## Link to postman - https://elements.getpostman.com/redirect?entityId=28284936-9420e4e7-b0ff-461e-a445-beb8c33057ed&entityType=collection
+
 ### 1. Register
 
 - **URL:** `/api/v1/auth/register`
@@ -23,8 +27,11 @@ Ensure that the application is running on localhost (default port 8080) or adjus
 
 ```json
 {
-  "username": "user",
-  "password": "password"
+    "username":"yermanov",
+    "password":"35ipihef",
+    "confirmPassword":"35ipihef",
+    "fullName":"Berik Yerman",
+    "avatarUrl": "2342324"
 }
 
 Response Body:
@@ -34,3 +41,27 @@ Response Body:
   "accessToken": "eyJhb...",
   "refreshToken": "dGhpcy..."
 }
+
+
+### 2.Login
+
+- **URL:** `/api/v1/auth/login`
+- **Method:** `POST`
+- **Status Code:** `200 OK` upon success
+- **Request Body:**
+
+```json
+{
+    "username":"yermanov",
+    "password":"35ipihef"
+}
+
+Response Body:
+
+
+{
+  "accessToken": "eyJhb...",
+  "refreshToken": "dGhpcy..."
+}
+
+
